@@ -19,7 +19,7 @@ public class CourseController {
 	@Autowired
 	private CourseService courseService;
 
-	@RequestMapping("/topic{id}/course")
+	@RequestMapping("/topic/{id}/course")
 	public List<Course> getCourses(@PathVariable String id) {
 		return courseService.getAllCourses(id);
 	}
